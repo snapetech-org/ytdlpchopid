@@ -516,3 +516,7 @@ Current env vars of interest:
 This repo is no longer just “a tool that tries to name songs.”
 
 It is an identification system with a second, explicit evidence model for synthetic-likelihood. The README should make that obvious, because that is now the real shape of the app.
+
+## Local security scanning
+
+Run `./scripts/security-scan-local.sh` for local Semgrep CE and the Trivy scanners that fit this repository. The installed pre-commit hook runs Semgrep on staged source/config files only; Trivy runs on demand or in CI. This public repository also runs Semgrep CE in GitHub Actions on changes and weekly. See [security-scanning.md](docs/security-scanning.md). Use `./scripts/update-security-tools.sh` to refresh local scanner data and the Trivy database.
